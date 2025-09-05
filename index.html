@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Asistencia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registro de Asistencia</h1>
+
+        <form id="registroForm">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+
+            <label for="dirigente">Dirigente:</label>
+            <input type="text" id="dirigente" required>
+
+            <label for="predicador">Predicador:</label>
+            <input type="text" id="predicador" required>
+
+            <label for="tipoServicio">Tipo de Servicio:</label>
+            <select id="tipoServicio" required>
+    <option value="">Seleccione...</option>
+    <option value="Culto de Jovenes">Culto de Jóvenes</option>
+    <option value="Culto de Damas">Culto de Damas</option>
+    <option value="Culto de Caballeros">Culto de Caballeros</option>
+    <option value="Culto Dominical">Culto Escuela Dominical</option>
+    <option value="Estudio Biblico">Culto Obra Social</option>
+    <option value="Confraternidad">Culto Confraternidad Misionera mitad de año Dorcas y Jóvenes</option>
+        <option value="Confraternidad2">Culto Confraternidad Misionera fin de año Dorcas y Jóvenes</option>
+    <option value="Musica">Culto de Música</option>
+    <option value="ayuno">Culto de Ayuno</option>
+    <option value="misiones">Culto Evangelístico</option>
+    <option value="Vigilia">Culto Vigilia</option>
+    
+</select>
+
+
+            <div class="grid-container">                
+                <div class="input-group">
+                    <label for="hermanos">Hermanos:</label>
+                    <input type="number" id="hermanos" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="hermanas">Hermanas:</label>
+                    <input type="number" id="hermanas" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="ninos">Niños:</label>
+                    <input type="number" id="ninos" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="visitas">Visitas:</label>
+                    <input type="number" id="visitas" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="hermanosVisitantes">Hermanos Visitantes:</label>
+                    <input type="number" id="hermanosVisitantes" min="0" value="0">
+                </div>
+                
+            <div class="grid-container">
+                </div>
+
+            <div class="total-asistencia">
+                <strong>Asistencia Total: <span id="totalAsistencia">0</span></strong>
+            </div>
+            </div>
+
+            <label for="ofrenda">Ofrenda:</label>
+            <input type="number" id="ofrenda" min="100" value="0" step="50">
+
+            <div class="form-buttons">
+                <button type="submit">Guardar Registro</button>
+                <button type="button" id="limpiarBtn">Limpiar Formulario</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <div class="historial-header">
+            <h2>Historial de Asistencia</h2>
+            <div class="historial-actions">
+                <button type="button" id="exportarExcelBtn">Exportar a Excel</button>
+                <button type="button" id="limpiarHistorialBtn">Limpiar Historial</button>
+            </div>
+        </div>
+        <table id="historialTable">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo de Servicio</th>
+                    <th>Dirigente</th>
+                    <th>Predicador</th>
+                    <th>Hermanos</th>
+                    <th>Hermanas</th>
+                    <th>Niños</th>
+                    <th>Visitas</th>
+                    <th>Hermanos Visitantes</th>
+                    <th>Asistencia Total</th>
+                    <th>Ofrenda</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
